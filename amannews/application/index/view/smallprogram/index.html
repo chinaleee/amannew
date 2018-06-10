@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="北京阿蛮游学教育科技有限公司"/>
+    <title>阿蛮小程序</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1,user-scalable=no"/>
+    <link rel="stylesheet" href="__STATIC__/index/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="__STATIC__/index/css/Xprogram.css">
+</head>
+<body>
+
+<div class="box">
+    {include file="common/header"}
+    <div class="content">
+        <div class="top">
+            <div class="img">
+                <img src="__STATIC__/index/img/11111.png" alt="">
+            </div>
+            <div class="top-box">
+                <div class="top-img">
+                    <img src="__STATIC__/index/img/banner_top.png" alt="">
+                </div>
+                <div class="top_p">
+                    <p>阿蛮小程序</p>
+                    <p>单词王者+东哥伴读</p>
+                    <a href="#">开始学习</a>
+                </div>
+            </div>
+
+        </div>
+        <div class="main-app">
+            <img src="__STATIC__/index/img/wx1.png" alt="">
+        </div>
+        <div class="main">
+            <!--<a></a>-->
+            <p>单词王者</p>
+            <p>利用你的闲暇时间和全国高手过招单词</p>
+            <p>夺取万元大奖</p>
+        </div>
+        <div class="main-lvlv">
+            <img src="__STATIC__/index/img/dongge_bg.png" alt="">
+            <div class="main-p">
+                <p>东哥伴读</p>
+                <p>一站式解决不自觉、不系统的线上学习问题</p>
+                <p>和全国外语爱好者竞争打卡排名</p>
+            </div>
+            <div class="main-img">
+                <div class="yuan"></div>
+                <img src="__STATIC__/index/img/dongge_xiao.png" alt="">
+            </div>
+        </div>
+        <div class="main-ap">
+            <img src="__STATIC__/index/img/Home-btn.png" alt="">
+            <div class="main-ap-right">
+                <p>阿蛮FM</p>
+                <p>一个不讲知识点，却能让你爱上外语的FM</p>
+            </div>
+        </div>
+        <div class="main-down">
+            <p>阿蛮小程序 燃爆新未来</p>
+            <p>极/速/开/启 学/习/之/旅</p>
+            <p></p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
+
+<script src="__STATIC__/index/js/jquery-3.2.1.min.js"></script>
+<script src="__STATIC__/index/js/bootstrap.min.js"></script>
+<script src="__STATIC__/index/js/app.js"></script>
+<script>
+    $('.navbar-toggle').on("click",function () {
+        var vis = $('.navbar_div').css('display');
+        if(vis == 'none'){
+            $('.navbar_div').slideDown();
+        }else{
+            $('.navbar_div').slideUp();
+        }
+    })
+
+    // 吸顶
+    var menu= document.getElementById("nav");
+    //获取距离页面顶端的距离
+    var titleTop = menu.offsetTop;
+    //滚动事件
+    window.addEventListener("scroll", function() {
+        var btop = document.body.scrollTop || document.documentElement.scrollTop;
+        // console.log(titleTop);
+        // console.log(titleTop);
+//如果滚动距离大于导航条据顶部的距离
+        if(btop > titleTop) {
+//为导航条设置fix
+            $(".nav").addClass("fixed")
+        } else {
+//移除fixed
+            $(".nav").removeClass("fixed")
+        }
+    })
+</script>

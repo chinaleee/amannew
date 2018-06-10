@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="北京阿蛮游学教育科技有限公司"/>
+    <title>个人中心</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1,user-scalable=no"/>
+    <link rel="stylesheet" href="__STATIC__/index/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="__STATIC__/index/css/Personal.css">
+    <link rel="stylesheet" href="__STATIC__/index/css/swiper.min.css">
+</head>
+<body>
+
+<div class="box">
+    {include file="common/header"}
+     <div class="content">
+         <div class="con_top">
+             <img src="__STATIC__/img/BANNER%20(2).png" alt="">
+         </div>
+         <div class="down">
+             <div class="left">
+                 <div class="P-tx">
+                     <img src="__STATIC__/img/P-tx.png" alt="">
+                 </div>
+                 <div class="left_middle">
+                     <p id="p"> &nbsp; &nbsp;个人中心</p>
+                 </div>
+
+                 <div class="list">
+                     <div class="list_middle"><img src="__STATIC__/img/kc.png" alt="">
+                         <select id="select"> &nbsp; &nbsp;课程管理
+                             <option value="课程管理" style="color: black;">课程管理</option>
+                            <option value="课程管理" style="color: black;">托福</option>
+                             <option value="课程管理" style="color: black;">雅思</option>
+                         </select>
+                     </div>
+                     <div class="list_middle"><img src="__STATIC__/img/ks.png" alt="">
+                         <select id="select2">&nbsp; &nbsp;考试中心
+                             <option value="考试中心">考试中心</option></select>
+                     </div>
+                     <div class="list_middle"><img src="__STATIC__/img/xx.png" alt="">
+                         <select id="select3">&nbsp; &nbsp;我的问答
+                            <option value="我的问答">我的问答</option></select>
+                     </div>
+                     <!--<div class="list_middle"><img src="__STATIC__/img/gl.png" alt="">-->
+                         <!--<select id="select4"> &nbsp; &nbsp;个人管理-->
+                             <!--<option value="个人管理">个人管理</option></select>-->
+                     <!--</div>-->
+
+                 </div>
+             </div>
+             <div class="middle">
+                 <div class="middle_top">
+                     <p>我收藏课程</p>
+                 </div>
+                 <div class="middle_down">
+                     <ul>
+                         {if condition="$collection_info neq null"}
+
+                             {foreach name='collection_info' item='vo'}
+                             <li>
+                                 <img src="__STATIC__/{$vo.thum}" alt="" style="float: left">
+                                 <p>{$vo.title}</p>
+                                 <p>讲师:{$vo.tid}</p>
+                                 <p>课时:26课时</p>
+                                 <p>直接观看 <span>|</span> 查看课程</p>
+                             </li>
+                             {/foreach}
+                         {else /}
+                               <li>
+                                   <br><br>
+                                 <p>您暂时没有观看课程!快去吧~</p>
+                             </li>
+
+                         {/if}
+
+                         </ul>
+                 </div>
+             </div>
+             <div class="right">
+                 <div class="right_top">
+                     <p>{$user_info['u_name']}</p>
+                 </div>
+                 <div class="right_middle">
+                     <a href="">个人资料</a>
+                     <a href="">修改头像</a>
+                 </div>
+                 <div class="right_down">
+                     <!--<div class="Dj">-->
+                         <!--<p>我的等级：<span>{$user_info['u_grade']}</span></p>-->
+                         <!--<p>我的蛮豆：<span>{$user_info['u_mark']}点</span><i>蛮豆兑>></i></p>-->
+                     <!--</div>-->
+                     <div class="down_zx">
+                         <p>最新公告</p>
+                     </div>
+                     <p class="accurate">92%准确率押题666<span>2018.06.08</span></p>
+                     <div class="start">
+                         <div class="start_teacher">
+                             <p>明星讲师</p>
+                         </div>
+                         <ul>
+                             <li><img src="__STATIC__/img/teacher-wd.png" alt=""><p>王东</p></li>
+                             <li><img src="__STATIC__/img/teacher-2.png" alt=""><p>郭澎</p></li>
+                             <li><img src="__STATIC__/img/teacher-3.png" alt=""><p>刘文彬</p></li>
+                         </ul>
+                     </div>
+                 </div>
+             </div>
+         </div>
+
+     </div>
+</div>
+
+</body>
+</html>
+
+<script src="__STATIC__/index/js/jquery-3.2.1.min.js"></script>
+<script src="__STATIC__/index/js/bootstrap.min.js"></script>
+<script src="__STATIC__/index/js/swiper.min.js"></script>
+<script src="__STATIC__/index/js/app.js"></script>
+<script>
+    $('.navbar-toggle').on("click",function () {
+        var vis = $('.navbar_div').css('display');
+        if(vis == 'none'){
+            $('.navbar_div').slideDown();
+        }else{
+            $('.navbar_div').slideUp();
+        }
+    })
+
+    var swiper = new Swiper('.swiper-container', {
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev'
+        },
+        autoplay: {
+            stopOnLastSlide:true
+        },
+        loop: true,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true
+        }
+    });
+
+    var menu= document.getElementById("nav");
+    //获取距离页面顶端的距离
+    var titleTop = menu.offsetTop;
+    //滚动事件
+    window.addEventListener("scroll", function() {
+        var btop = document.body.scrollTop || document.documentElement.scrollTop;
+        // console.log(titleTop);
+        // console.log(titleTop);
+//如果滚动距离大于导航条据顶部的距离
+        if(btop > titleTop) {
+//为导航条设置fix
+            $(".nav").addClass("fixed")
+        } else {
+//移除fixed
+            $(".nav").removeClass("fixed")
+        }
+    })
+</script>

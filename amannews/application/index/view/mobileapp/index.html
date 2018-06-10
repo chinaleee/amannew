@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="北京阿蛮游学教育科技有限公司"/>
+    <title>手机APP</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1,user-scalable=no"/>
+    <link rel="stylesheet" href="__STATIC__/index/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="__STATIC__/index/css/PhoneApp.css">
+
+</head>
+<body>
+
+<div class="box">
+    {include file="common/header"}
+    <div class="content">
+        <div class="top">
+            <div class="img">
+                <img src="__STATIC__/index/img/banner-app.png" alt="">
+            </div>
+            <div class="top-box">
+                <div class="top-img">
+                    <img src="__STATIC__/index/img/banner_top.png" alt="">
+                </div>
+                <div class="top_p">
+                    <p>阿蛮APP<span>（敬请期待）</span></p>
+                    <p>它或许会颠覆你学外语的思想</p>
+                </div>
+            </div>
+        </div>
+        <div class="main">
+            <p>最快6个月，最晚一年</p>
+            <p>让你将一门外语掌握为母语</p>
+        </div>
+        <div class="main-app">
+            <img src="__STATIC__/index/img/4.png" alt="">
+        </div>
+        <div class="main-lvlv">
+            <img src="__STATIC__/index/img/lvlv.png" alt="">
+            <div class="main-p">
+                <p>从听说学起，</p>
+                <p>外语其实应该这么学</p>
+            </div>
+            <div class="main-img">
+                <img src="__STATIC__/index/img/6.png" alt="">
+            </div>
+        </div>
+        <div class="main-ap">
+            <img src="__STATIC__/index/img/quanzhen.png" alt="">
+            <div class="main-ap-right">
+                <p>全真模拟，全真演练，系统学习</p>
+                <p>扔掉语法，动用你的感官去学习外语</p>
+            </div>
+        </div>
+        <div class="main-down">
+            <img src="__STATIC__/index/img/app4.png" alt="">
+            <div class="main-down-con">
+                <div class="main-down-p">
+                    <p>这次，</p>
+                    <p>让我们一起来创造外语学习的新潮流</p>
+                </div>
+                <div class="main-down-img">
+                    <img src="__STATIC__/index/img/zheci_app.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
+
+<script src="__STATIC__/index/js/jquery-3.2.1.min.js"></script>
+<script src="__STATIC__/index/js/bootstrap.min.js"></script>
+<script src="__STATIC__/index/js/app.js"></script>
+<script>
+    $('.navbar-toggle').on("click",function () {
+        var vis = $('.navbar_div').css('display');
+        if(vis == 'none'){
+            $('.navbar_div').slideDown();
+        }else{
+            $('.navbar_div').slideUp();
+        }
+    });
+
+    // 吸顶
+    var menu= document.getElementById("nav");
+    //获取距离页面顶端的距离
+    var titleTop = menu.offsetTop;
+    //滚动事件
+    window.addEventListener("scroll", function() {
+        var btop = document.body.scrollTop || document.documentElement.scrollTop;
+        // console.log(titleTop);
+        // console.log(titleTop);
+//如果滚动距离大于导航条据顶部的距离
+        if(btop > titleTop) {
+//为导航条设置fix
+            $(".nav").addClass("fixed")
+        } else {
+//移除fixed
+            $(".nav").removeClass("fixed")
+        }
+    })
+</script>

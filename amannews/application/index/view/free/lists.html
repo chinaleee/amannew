@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="北京阿蛮游学教育科技有限公司"/>
+    <title>雅思</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1,user-scalable=no"/>
+    <link rel="stylesheet" href="__STATIC__/index/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="__STATIC__/index/css/TFxy.css">
+    <link rel="stylesheet" href="__STATIC__/index/css/swiper.min.css">
+
+</head>
+<body>
+
+<div class="box">
+    {include file="common/header"}
+    <div class="core">
+        <div class="section section1">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <a class="swiper-slide banner">
+                        <img src="__STATIC__/index/img/BANNER-1.png" alt="">
+                    </a>
+                    <a class="swiper-slide banner">
+                        <img src="__STATIC__/index/img/BANNER-2.png" alt="">
+                    </a>
+                    <a class="swiper-slide banner">
+                        <img src="__STATIC__/index/img/BANNER-3.png" alt="">
+                    </a>
+                </div>
+                <div class="swiper-pagination"  style="bottom: 70px"></div>
+            </div>
+            <ul class="uls">
+                <li class="banner-book">
+                    <a href="javascript:;">
+                        <img src="__STATIC__/index/img/wd-head.png" alt="">
+                        <div>
+                            <p>2018.5.22晚9：00</p>
+                            <p>初级必过！技巧分享</p>
+                        </div>
+                    </a>
+                    <a href="javascript:;">
+                        <img src="__STATIC__/index/img/wd-head.png" alt="">
+                        <div>
+                            <p>2018.5.22晚9：00</p>
+                            <p>初级必过！技巧分享</p>
+                        </div>
+                    </a>
+                    <a href="javascript:;"  class="YS_a">
+                        <img src="__STATIC__/index/img/wd-head.png" alt="">
+                        <div>
+                            <p>2018.5.22晚9：00</p>
+                            <p>初级必过！技巧分享</p>
+                        </div>
+                    </a>
+                    <a href="javascript:;" class="YS_a">
+                        <img src="__STATIC__/index/img/wd-head.png" alt="">
+                        <div>
+                            <p>2018.5.22晚9：00</p>
+                            <p>初级必过！技巧分享</p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div id="content">
+            <div class="main">
+                <span>免费课</span>
+            </div>
+            <div class="content">
+                <ul class="con_ul">
+                    <li>
+                        <a href="">
+                            <img src="__STATIC__/index/img/yasi/mian_01.png" alt="" width="364px" height="230px">
+                            <p >东哥杀猪8K8第一期</p>
+                            <p>已有1678人进行学习</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="content2">
+            <div class="main">
+                <span>配套教材</span>
+            </div>
+            <div class="content">
+                <ul class="con_ul">
+                    <li>
+                        <a href="">
+                            <img src="__STATIC__/index/img/tuofu/pei_01.png" alt="" width="364px" height="230px">
+                            <p >东哥杀猪8K8</p>
+                            <p>已有1678人进行学习</p>
+                            <span>￥188.00</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="content3">
+            <div class="main">
+                <span>面授班级</span>
+            </div>
+            <div class="content">
+                <ul class="con_ul">
+                    <li>
+                        <a href="">
+                            <img src="__STATIC__/index/img/yasi/ban_01.png" alt="" width="364px" height="230px">
+                            <p >暑假别墅封闭集训A班7月份</p>
+                            <p>已有1589人进行学习</p>
+                            <span>￥36888.00</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div><img src="__STATIC__/index/img/yasi/jia.png" alt="">
+            <p>
+                <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    送学习资料
+                </a>
+            </p>
+            <div class="collapse" id="collapseExample">
+                <div class="card card-body">
+                    <p>加我免费领取学习资料！！！</p>
+                    <p>咨询相关问题，可以通过以下方式与我们联系</p>
+                    <p>微信：lxy330862007</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
+
+<script src="__STATIC__/index/js/jquery-3.2.1.min.js"></script>
+<script src="__STATIC__/index/js/bootstrap.min.js"></script>
+<script src="__STATIC__/index/js/swiper.min.js"></script>
+<script src="__STATIC__/index/js/app.js"></script>
+<script>
+    $('.navbar-toggle').on("click",function () {
+        var vis = $('.navbar_div').css('display');
+        if(vis == 'none'){
+            $('.navbar_div').slideDown();
+        }else{
+            $('.navbar_div').slideUp();
+        }
+    })
+
+    var swiper = new Swiper('.swiper-container', {
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev'
+        },
+        autoplay: {
+            stopOnLastSlide:true
+        },
+        loop: true,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true
+        }
+    });
+
+    var menu= document.getElementById("nav");
+    //获取距离页面顶端的距离
+    var titleTop = menu.offsetTop;
+    //滚动事件
+    window.addEventListener("scroll", function() {
+        var btop = document.body.scrollTop || document.documentElement.scrollTop;
+        // console.log(titleTop);
+        // console.log(titleTop);
+//如果滚动距离大于导航条据顶部的距离
+        if(btop > titleTop) {
+//为导航条设置fix
+            $(".nav").addClass("fixed")
+        } else {
+//移除fixed
+            $(".nav").removeClass("fixed")
+        }
+    })
+</script>

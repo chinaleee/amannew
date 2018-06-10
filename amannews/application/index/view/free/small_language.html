@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="北京阿蛮游学教育科技有限公司"/>
+    <title>高分经验</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1,user-scalable=no"/>
+    <link rel="stylesheet" href="__STATIC__/index/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="__STATIC__/index/css/XYZxy.css">
+    <link rel="stylesheet" href="__STATIC__/index/css/swiper.min.css">
+</head>
+<body>
+
+<div class="box">
+    {include file="common/header"}
+    <div class="core">
+        <div class="section section1">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <a class="swiper-slide banner">
+                        <img src="__STATIC__/index/img/BANNER-1.png" alt="">
+                    </a>
+                    <a class="swiper-slide banner">
+                        <img src="__STATIC__/index/img/BANNER-2.png" alt="">
+                    </a>
+                    <a class="swiper-slide banner">
+                        <img src="__STATIC__/index/img/BANNER-3.png" alt="">
+                    </a>
+                </div>
+                <div class="swiper-pagination"  style="bottom: 70px"></div>
+            </div>
+            <ul class="uls">
+                <li class="banner-book">
+                    <a href="#"><img src="__STATIC__/index/img/xyz1.png" alt=""></a>
+                    <a href="#"><img src="__STATIC__/index/img/xyz2.png" alt=""></a>
+                    <a href="#"><img src="__STATIC__/index/img/xyz3.png" alt=""></a>
+                    <a href="#"><img src="__STATIC__/index/img/xyz4.png" alt=""></a>
+                    <a href="#"><img src="__STATIC__/index/img/xyz5.png" alt=""></a>
+                </li>
+            </ul>
+        </div>
+        <div id="content">
+            <div class="main">
+                <span>免费课</span>
+            </div>
+            <div class="content">
+                <ul class="con_ul">
+                    <li>
+                        <a href="">
+
+                            <p >【雅思】阿蛮高分学员经验分享 白天明口语1</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+
+                            <p >【雅思】阿蛮高分学员经验分享 白天明口语2</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+
+                            <p>【雅思】阿蛮高分学员经验分享 白天明阅读1</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+
+                            <p >【雅思】阿蛮高分学员经验分享 白天明阅读2</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+
+                            <p>【雅思】阿蛮高分学员经验分享 白天明写作1</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+
+                            <p>【雅思】阿蛮高分学员经验分享 白天明写作2</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+
+                            <p>【雅思】阿蛮高分学员经验分享 白天明听力1</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+
+                            <p>【雅思】阿蛮高分学员经验分享 白天明听力2</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+
+                            <p>【雅思】阿蛮高分学员经验分享 白天明听力2</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+
+                            <p>【雅思】阿蛮高分学员经验分享 白天明听力1</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+
+                            <p>【雅思】阿蛮高分学员经验分享 白天明听力2</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+
+                            <p>【雅思】阿蛮高分学员经验分享 白天明听力2</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <ul class="footer_ul">
+            <li><a href="">人才招聘</a></li>
+            <li>｜</li>
+            <li><a href="">付款方式</a></li>
+            <li>｜</li>
+            <li><a href="">客服中心</a></li>
+            <li>｜</li>
+            <li><a href="">网站地图</a></li>
+        </ul>
+        <div class="down">
+            <p>Copyright © 2016 Beijing Aman Youxue Education Technology Co.Ltd.</p>
+            <p>北京阿蛮游学教育科技有限责任公司　京ICP备16026953号</p>
+        </div>
+
+    </footer>
+</div>
+
+</body>
+</html>
+
+<script src="__STATIC__/index/js/jquery-3.2.1.min.js"></script>
+<script src="__STATIC__/index/js/bootstrap.min.js"></script>
+<script src="__STATIC__/index/js/swiper.min.js"></script>
+<script src="__STATIC__/index/js/app.js"></script>
+<script>
+    $('.navbar-toggle').on("click",function () {
+        var vis = $('.navbar_div').css('display');
+        if(vis == 'none'){
+            $('.navbar_div').slideDown();
+        }else{
+            $('.navbar_div').slideUp();
+        }
+    })
+
+    var swiper = new Swiper('.swiper-container', {
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev'
+        },
+        autoplay: {
+            stopOnLastSlide:true
+        },
+        loop: true,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true
+        }
+    });
+
+    var menu= document.getElementById("nav");
+    //获取距离页面顶端的距离
+    var titleTop = menu.offsetTop;
+    //滚动事件
+    window.addEventListener("scroll", function() {
+        var btop = document.body.scrollTop || document.documentElement.scrollTop;
+        // console.log(titleTop);
+        // console.log(titleTop);
+//如果滚动距离大于导航条据顶部的距离
+        if(btop > titleTop) {
+//为导航条设置fix
+            $(".nav").addClass("fixed")
+        } else {
+//移除fixed
+            $(".nav").removeClass("fixed")
+        }
+    })
+</script>
